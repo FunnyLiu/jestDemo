@@ -95,6 +95,7 @@ function compileAndroidCode() {
 }
 
 test("compiling android goes as expected", () => {
+    // 这里注意一定要将需要测试的函数套一层，然后将外部函数传入才行
     expect(compileAndroidCode).toThrow();
     expect(compileAndroidCode).toThrow(Error);
 
